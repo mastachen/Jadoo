@@ -115,7 +115,7 @@ input:focus:invalid {
 .button {
   height: 6rem;
   width: 17rem;
-  font-family: "Roboto", "sans-serif";
+  font-family: "open sans", "sans-serif";
   font-weight: 500;
   font-size: 18px;
   border-radius: 1rem;
@@ -237,7 +237,7 @@ header ul li {
 header ul li a {
   position: relative;
   color: #212832;
-  font-family: "Roboto", "sans-serif";
+  font-family: "open sans", "sans-serif";
   font-weight: 600;
   text-decoration: none;
   padding: 1rem 0;
