@@ -19,4 +19,12 @@ document.addEventListener("DOMContentLoaded", function () {
       header.classList.remove("sticky");
     }
   });
+
+  window.addEventListener("touchmove", function () {
+    if (window.scrollY > 50) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
+  });
 });

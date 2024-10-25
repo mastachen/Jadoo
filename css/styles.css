@@ -173,7 +173,7 @@ input:focus:invalid {
   background-color: transparent;
   height: 4rem;
   width: 10.2rem;
-  font-family: "Roboto", "sans-serif";
+  font-family: "open sans", "sans-serif";
   font-weight: 600;
   font-size: 17px;
   transition: all 0.5s;
@@ -275,7 +275,7 @@ header .link-action {
 
 header .dropdown {
   color: #212832;
-  font-family: "Roboto", "sans-serif";
+  font-family: "open sans", "sans-serif";
   font-weight: 600;
   text-decoration: none;
   padding: 1rem 0;
