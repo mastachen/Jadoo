@@ -1,0 +1,14 @@
+{
+  "name": "renderspace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/styles.css -w"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "sass": "^1.80.3"
+  }
+}

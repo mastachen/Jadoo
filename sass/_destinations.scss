@@ -1,0 +1,106 @@
+@use "globals" as *;
+
+.top-destinations {
+  text-align: center;
+  margin: 17.8rem 3.3rem 0 3.3rem;
+  position: relative;
+}
+
+.top-destinations h1 {
+  font-family: $font-secondary;
+  font-size: 5rem;
+  font-weight: 700;
+  color: $color-dark-3;
+  margin-bottom: 6rem;
+}
+
+.top-destinations h2 {
+  font-family: $font-primary;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $color-dark-4;
+  margin-bottom: 0.8rem;
+}
+
+.top-destinations h3 {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $color-dark-4;
+}
+
+.destinations-container {
+  display: flex;
+  justify-content: stretch;
+  gap: 4.6rem;
+  flex-wrap: wrap;
+}
+
+.destination-card {
+  background-color: $color-white-1;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  width: 31.4rem;
+  text-align: left;
+  padding-bottom: 4.2rem;
+  box-shadow: 0px 1.85px 3.15px 0px #00000001, 0px 8.15px 6.52px 0px #00000002,
+    0px 20px 13px 0px #00000003, 0px 38.52px 25.48px 0px #00000003,
+    0px 64.81px 46.85px 0px #00000004, 0px 100px 80px 0px #00000005;
+}
+
+.destination-card img.image-card {
+  width: 100%;
+  height: 33rem;
+  object-fit: cover;
+  object-position: 50% 0%;
+}
+
+.top-destinations img.img-spring {
+  position: absolute;
+  bottom: 5rem;
+  right: 0;
+  z-index: -1;
+}
+
+.destination-info {
+  display: flex;
+  justify-content: space-between;
+  padding: 2.7rem 2rem 1.9rem 2rem;
+}
+
+.trip-info {
+  padding: 0 2rem;
+  display: flex;
+  gap: 1.4rem;
+}
+
+.trip-info img.icon-trip {
+  height: 2rem;
+}
+
+@media only screen and (max-width: $bp-largest) {
+  .img-spring {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .top-destinations {
+    margin: 5rem 0 0 0;
+  }
+
+  .top-destinations h1 {
+    margin-bottom: 2rem;
+    font-size: 4rem;
+  }
+
+  .destinations-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .img-spring {
+    display: none;
+  }
+}

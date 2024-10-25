@@ -1,0 +1,167 @@
+@use "globals" as *;
+
+header {
+  transition: all 0.5s;
+}
+
+header.sticky {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 8rem;
+  z-index: 1000;
+  background-color: $color-white-tr-1;
+  box-shadow: 0 2px 5px $color-shadow-1;
+
+  nav {
+    width: $container-width;
+  }
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+}
+
+header ul {
+  list-style-type: none;
+  display: flex;
+  gap: 3rem;
+}
+
+header ul li {
+  margin-left: 3rem;
+}
+
+header ul li a {
+  position: relative;
+  color: $color-dark-1;
+  font-family: $font-tertiary;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 0;
+  display: block;
+  font-size: 17px;
+}
+
+header ul li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 10%;
+  background-color: $color-dark-1;
+  opacity: 0;
+  transform: translateY(200%);
+  transition: all 0.5s;
+}
+
+header ul li a:hover::before {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+header .link-action {
+  display: inline-block;
+  border: 1px solid $color-dark-1;
+  border-radius: 0.5rem;
+  width: 10.2rem;
+  height: 4rem;
+  text-align: center;
+  line-height: 1.7rem;
+}
+
+// dropdown
+header .dropdown {
+  color: $color-dark-1;
+  font-family: $font-tertiary;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1rem 0;
+  display: block;
+  transition: all 0.3s;
+  font-size: 17px;
+  border: none;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+header .dropdown:hover {
+  cursor: pointer;
+}
+
+header .dropdown:focus-within {
+  background-color: transparent;
+  outline: none;
+}
+
+#burger-icon {
+  width: 3rem;
+  height: 3rem;
+  fill: $color-dark-1;
+  display: none;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: $bp-largest) {
+  #menu {
+    display: none;
+    flex-direction: column;
+    background-color: $color-white-1;
+    position: absolute;
+    top: 10rem;
+    right: 0;
+    width: 20rem;
+    padding: 2rem;
+    box-shadow: 0px 8px 16px $color-shadow-1;
+    z-index: 1;
+    gap: 1rem;
+  }
+
+  #menu li {
+    margin: 15px 0;
+  }
+
+  #menu.active {
+    display: flex;
+  }
+
+  #burger-icon {
+    display: flex;
+  }
+
+  nav {
+    margin: 0 1rem;
+  }
+
+  header ul li a::before {
+    left: -1rem;
+    transform: translateX(-200%);
+    width: 4%;
+    height: 100%;
+  }
+
+  header ul li a:hover::before {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  header.sticky {
+    nav {
+      margin: 0 3rem 0 1.5rem;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  #menu {
+    top: 5rem;
+    width: 100%;
+    align-items: center;
+  }
+}

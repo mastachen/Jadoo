@@ -1,0 +1,87 @@
+@use "globals" as *;
+
+.button {
+  height: 6rem;
+  width: 17rem;
+  font-family: $font-tertiary;
+  font-weight: 500;
+  font-size: 18px;
+  border-radius: 1rem;
+  transition: all 0.5s;
+}
+
+.button:hover {
+  cursor: pointer;
+  transform: translateY(-1px);
+  box-shadow: 2px 3px 8px 1px rgb(0 0 0 / 30%);
+}
+
+.button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.button-icon img.icon {
+  width: 5.2rem;
+  box-shadow: 0px 15px 30px 0px $color-secondary-4;
+  border-radius: 50%;
+  transition: all 0.5s;
+}
+
+.button-icon:hover {
+  transform: none;
+  box-shadow: none;
+  color: $color-dark-6;
+}
+
+.button-icon:hover img {
+  transform: scale(1.1);
+  box-shadow: 2px 3px 8px 1px rgb(0 0 0 / 30%);
+}
+
+.button-primary {
+  border: none;
+  background-color: $color-primary-1;
+  color: $color-white-1;
+  box-shadow: 0px 20px 35px 0px $color-primary-2;
+}
+
+.button-secondary {
+  border: none;
+  border-radius: 1rem;
+  background-color: transparent;
+  color: $color-dark-5;
+}
+
+.button-tertiary {
+  border: 1px solid $color-dark-1;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  height: 4rem;
+  width: 10.2rem;
+  font-family: $font-tertiary;
+  font-weight: 600;
+  font-size: 17px;
+  transition: all 0.5s;
+}
+
+.button-tertiary:hover {
+  background-color: $color-dark-1;
+  color: $color-white-1;
+  cursor: pointer;
+}
+
+.button-quaternary {
+  border: none;
+  border-radius: 1rem;
+  background: linear-gradient(180deg, $color-secondary-2, $color-secondary-3);
+  height: 6.8rem;
+  width: 32.7rem;
+  font-family: $font-quinary;
+  font-weight: 600;
+  font-size: 17px;
+  color: $color-white-1;
+  transition: all 0.5s;
+}

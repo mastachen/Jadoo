@@ -1,0 +1,101 @@
+@use "globals" as *;
+
+.hero {
+  margin: 2rem 0.9rem 0 0.9rem;
+  display: flex;
+  align-items: center;
+}
+
+.buttons {
+  display: flex;
+  gap: 4rem;
+}
+
+.hero-text {
+  padding-right: 7rem;
+}
+
+.hero h1 {
+  font-family: $font-secondary;
+  font-weight: 700;
+  font-size: 8.4rem;
+  color: $color-dark-2;
+  line-height: 8.4rem;
+  letter-spacing: -0.5rem;
+}
+
+.hero h2 {
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 2rem;
+  color: $color-secondary-1;
+  text-transform: uppercase;
+}
+
+.hero h3 {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: $color-dark-4;
+}
+
+.hero .img-under {
+  position: relative;
+}
+
+.hero .img-under::before {
+  content: "";
+  position: absolute;
+  background-image: url(../img/Decore3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  height: 100%;
+  width: 170%;
+  top: 75%;
+  left: -15%;
+}
+
+.hero-text-column {
+  flex: 0 0 54.5rem;
+}
+
+.hero-image-column {
+  position: relative;
+}
+
+@media only screen and (max-width: $bp-largest) {
+  .hero-text-column {
+    flex: 1;
+  }
+
+  .hero-image-column {
+    img.img-traveller {
+      width: 95%;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .hero {
+    margin: 3rem 1rem 0 1rem;
+
+    .hero-image-column {
+      display: none;
+    }
+
+    h1 {
+      font-size: 6.5rem;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      font-size: 1.8rem;
+      margin-bottom: 2rem;
+    }
+
+    .button-icon {
+      gap: 0;
+    }
+  }
+}

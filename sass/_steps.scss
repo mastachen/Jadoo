@@ -1,0 +1,257 @@
+@use "globals" as *;
+
+.steps {
+  margin: 18rem 4.8rem 0 4.8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 11.8rem;
+  align-items: center;
+}
+
+.steps h1 {
+  font-family: $font-secondary;
+  font-size: 5rem;
+  font-weight: 700;
+  color: $color-dark-3;
+  margin-bottom: 3.1rem;
+}
+
+.steps h2 {
+  font-family: $font-primary;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: $color-dark-4;
+  margin-bottom: 0.8rem;
+}
+
+.steps h3 {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: $color-dark-4;
+  margin-bottom: 0.4rem;
+}
+
+.steps h4 {
+  font-family: $font-primary;
+  font-size: 1.6rem;
+  font-weight: 400;
+  color: $color-dark-4;
+}
+
+.steps h4.heading4-medium {
+  font-weight: 500;
+  color: $color-dark-7;
+}
+
+.steps h4.heading4-small {
+  font-weight: 500;
+  color: $color-dark-7;
+  font-size: 1.4rem;
+}
+
+.steps h5 {
+  font-family: $font-primary;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: $color-dark-6;
+}
+
+.steps h6 {
+  font-family: $font-primary;
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: $color-dark-6;
+}
+
+.steps-text,
+.step-card {
+  flex: 1;
+}
+
+.step {
+  margin-bottom: 4rem;
+  margin-right: 10rem;
+  display: flex;
+  gap: 2.1rem;
+}
+
+.step img {
+  width: 4.7rem;
+  object-fit: contain;
+}
+
+// STEP CARD
+.step-card {
+  padding: 2.5rem;
+  border-radius: 2.6rem;
+  max-width: 37rem;
+  box-shadow: 6px 20px 20px 9px rgb(5 5 5 / 6%);
+  position: relative;
+  background-color: $color-white-1;
+}
+
+.step-card img.step-card-img {
+  border-radius: 2.4rem;
+  width: 32rem;
+  margin-bottom: 2.6rem;
+}
+
+.step-card .icons {
+  display: flex;
+  margin-bottom: 3rem;
+  gap: 1.8rem;
+}
+
+.step-card .icons img {
+  width: 3.6rem;
+  margin-bottom: 0;
+}
+
+.step-card .counter {
+  display: flex;
+  justify-content: space-between;
+}
+
+.step-card .counter img.building {
+  width: 1.6rem;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+.step-card .counter img.heart {
+  width: 2rem;
+  margin-bottom: 0;
+  object-fit: contain;
+}
+
+.step-card img.step-card-circle {
+  position: absolute;
+  top: -15rem;
+  left: -5rem;
+  z-index: -1;
+}
+
+.step-card-ongoing {
+  position: absolute;
+  box-shadow: 6px 20px 20px 9px rgb(5 5 5 / 6%);
+  background-color: $color-white-1;
+  border-radius: 1.8rem;
+  padding: 1.8rem;
+  bottom: 5rem;
+  left: 23rem;
+  width: 25rem;
+  display: flex;
+  gap: 1.1rem;
+}
+
+.step-card-ongoing img {
+  width: 5rem;
+  height: 5rem;
+  margin-bottom: 0;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.step-card-ongoing .text-progress {
+  color: $color-tertiary-1;
+}
+
+// PROGRESS
+.step-card .step-info-text .text-progress {
+  color: $color-tertiary-1;
+}
+
+progress {
+  appearance: none;
+  height: 0.5rem;
+}
+
+progress::-webkit-progress-bar {
+  background-color: $color-dark-8;
+  border-radius: 3rem;
+}
+
+progress::-webkit-progress-value {
+  background-color: $color-tertiary-1;
+  border-radius: 3rem;
+}
+
+@media only screen and (max-width: $bp-ultra-large) {
+  .steps {
+    gap: 2rem;
+  }
+
+  .steps-text {
+    flex: 0 0 45%;
+  }
+}
+
+@media only screen and (max-width: $bp-largest) {
+  .steps {
+    gap: 2rem;
+  }
+
+  .steps-text {
+    flex: 0 0 45%;
+  }
+}
+
+@media only screen and (max-width: $bp-large) {
+  .step-card {
+    max-width: 32rem;
+
+    img.step-card-img {
+      width: 100%;
+    }
+
+    img.step-card-circle {
+      transform: scale(0.7);
+    }
+
+    .step-card-ongoing {
+      bottom: -13rem;
+      left: 0;
+      box-shadow: 2px 1px 20px 9px rgba(5, 5, 5, 0.06);
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .steps {
+    margin: 5rem 0 0 0;
+    flex-direction: column;
+
+    h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+      font-size: 4rem;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .step {
+      margin: 0 0 1rem 0;
+    }
+
+    .step-card {
+      .step-card-ongoing {
+        bottom: -13rem;
+        left: 0;
+        box-shadow: 2px 1px 20px 9px rgba(5, 5, 5, 0.06);
+      }
+    }
+  }
+
+  img.step-card-circle {
+    transform: scale(0.8);
+  }
+}
+
+@media only screen and (max-width: $bp-small) {
+  img.step-card-circle {
+    display: none;
+  }
+}

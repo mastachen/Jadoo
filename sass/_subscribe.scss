@@ -1,0 +1,127 @@
+@use "globals" as *;
+
+.subscribe {
+  margin: 13rem 0.5rem 0 0.5rem;
+  background-color: rgba($color-tertiary-2, 0.2);
+  padding: 7.9rem 15.5rem 6.4rem 15.5rem;
+  border-radius: 12.9rem 2rem 2rem 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.subscribe h1 {
+  font-family: $font-primary;
+  font-weight: 600;
+  font-size: 3.3rem;
+  line-height: 5.4rem;
+  color: $color-dark-4;
+}
+
+.subscribe-inputs {
+  display: flex;
+  gap: 1.7rem;
+}
+
+.subscribe input {
+  border-radius: 1rem;
+  width: 42.1rem;
+  height: 6.8rem;
+  border: none;
+  font-family: $font-quaternary;
+  font-size: 1.4rem;
+  font-weight: 400;
+  padding-left: 2.8rem;
+}
+
+.subscribe input:focus {
+  outline: none;
+  border: 1px solid $color-dark-4;
+}
+
+.img-send {
+  position: absolute;
+  top: -2rem;
+  right: -2rem;
+}
+
+.img-pluses {
+  position: absolute;
+  bottom: -4.5rem;
+  right: -10rem;
+}
+
+.img-circles-1 {
+  position: absolute;
+  opacity: 10%;
+  left: 2rem;
+  bottom: 0;
+  z-index: -1;
+}
+
+.img-circles-2 {
+  position: absolute;
+  opacity: 10%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.subscribe .subscribe-inputs {
+  text-align: left;
+}
+
+@media only screen and (max-width: $bp-ultra-large) {
+  .img-pluses {
+    right: -2rem;
+  }
+}
+
+@media only screen and (max-width: $bp-largest) {
+  .subscribe {
+    margin: 13rem 3rem 0 3rem;
+  }
+
+  .img-pluses {
+    right: -2rem;
+    transform: scale(0.8);
+  }
+
+  .subscribe-inputs {
+    .form-field {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .subscribe {
+    margin: 5rem 0 0 0;
+    padding: 5rem 1rem 5rem 2rem;
+
+    h1 {
+      font-size: 2.8rem;
+      text-align: left;
+      margin-left: 1rem;
+    }
+
+    .img-send {
+      right: -1rem;
+    }
+
+    .img-pluses {
+      z-index: -1;
+    }
+
+    .subscribe-inputs {
+      flex-direction: column;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

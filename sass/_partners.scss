@@ -1,0 +1,40 @@
+@use "globals" as *;
+
+.partners {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 100%;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin: 20.7rem 4.5rem 0 4.5rem;
+}
+
+.partners img {
+  max-width: 12rem;
+  max-height: 12rem;
+  object-fit: contain;
+}
+
+img.grayscale {
+  filter: grayscale(100%);
+}
+
+@media only screen and (max-width: $bp-medium) {
+  .partners {
+    flex-wrap: nowrap;
+    margin: 16rem 0 0 0;
+    animation: slide 20s linear infinite;
+  }
+
+  @keyframes slide {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(
+        -50%
+      ); /* Move by half of the total width for seamless loop */
+    }
+  }
+}
